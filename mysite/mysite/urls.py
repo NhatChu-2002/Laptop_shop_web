@@ -17,11 +17,21 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
+from store import views as store_views
+from account import views as account_views
+
 urlpatterns = [
     path('store/',include('store.urls')),
     path('admin/', admin.site.urls),
-    # login and customer site
-    # path('/', include('customer.urls'))
+    path('auth', include('account.urls')),
+    path('login', account_views.login_view, name='login'),
+    path('', account_views.index, name='index'),
+    
+    # path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    # path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
+    # login form 
+    # path('', store_views.loginForm, name=''),
+    # path('login', store_views.login, name=''),   
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

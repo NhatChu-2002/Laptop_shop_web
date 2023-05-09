@@ -49,23 +49,54 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa-solid fa-person"></i>
+                        Users
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="{% url 'users' %}">View</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'user_add' %}">Add new User</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#imageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa-solid fa-image"></i>
+                        Image
+                    </a>
+                    <ul class="collapse list-unstyled" id="imageSubmenu">
+                        <li>
+                            <a href="{% url 'view_images' %}">View</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'upload_image' %}">Add new Image</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#brandSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa-solid fa-shop"></i>
+                        Brand
+                    </a>
+                    <ul class="collapse list-unstyled" id="brandSubmenu">
+                        <li>
+                            <a href="{% url 'brand_list' %}">View Brands</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'brand_add' %}">Add new brand</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="#">
                         <i class="fas fa-briefcase"></i>
                         About
                     </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fa-solid fa-person"></i>
-                        Customers
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">View</a>
-                        </li>
-                        <li>
-                            <a href="#">Add new Customers</a>
-                        </li>
-
-                    </ul>
                 </li>
                 <li>
                     <a href="#">
@@ -114,8 +145,6 @@
     ></script>
         <!-- slick slider js -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- our javascripts -->
-    
     <!-- icon -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://kit.fontawesome.com/682fa468d1.js" crossorigin="anonymous"></script>
